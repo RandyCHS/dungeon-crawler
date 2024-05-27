@@ -8,421 +8,25 @@ namespace customArt {
     export const Chest = assets.image`ChestImage`;
     export const Wall = assets.image`WallImage`;
     export const Door = assets.image`DoorImage`;
-    // export const BoyImage =assets.image`BoyImage`;
     // export const GirlImage = assets.image`GirlImage`;
     //images for boySprite animation
-    export const BoyImage =assets.image`BoyImage2`;
-    export const right1 = img`
-        ................................
-        ................................
-        ................................
-        ................................
-        ...................ff...........
-        ................fff99f..........
-        .............fff999999f.........
-        ............f999999999f.........
-        ...........f9999999999f.........
-        ..........f9999999dd99f.........
-        .........f999999dddddf..........
-        .........f99d9dddddddf..........
-        .........f99d9dddddfdf..........
-        ..........f9dddddddfddf.........
-        ..........f99ddddddddf..........
-        ...........fdddddddddf..........
-        ............fdddddfdf...........
-        .............fdddddf............
-        ..............ffddf.............
-        .............fcc88cf............
-        .............f88cccdf...........
-        ............fddf888fdf..........
-        ............fdfccccfdf..........
-        .............ff7777ffaf.........
-        ............fb77f77f7af.........
-        ............fbbf.ffcbaf.........
-        .............fff..fbbf..........
-        ...................ff...........
-        ................................
-        ................................
-        ................................
-        ................................
-    `;
-    export const right2 = img`
-        ................................
-        ................................
-        ................................
-        ................................
-        ...................ff...........
-        ................fff99f..........
-        .............fff999999f.........
-        ............f999999999f.........
-        ...........f9999999999f.........
-        ..........f9999999dd99f.........
-        .........f99999ddddddf..........
-        .........f99d9dddddddf..........
-        .........f99dddddddfdf..........
-        ..........f9dddddddfddf.........
-        ..........f99ddddddddf..........
-        ...........fdddddddddf..........
-        ............fdddddfdf...........
-        .............fdddddf............
-        ..............ffddf.............
-        .............fcc88f.............
-        .............f88cccf............
-        ............fddf888f............
-        ............fddfcccf............
-        ............fddf777f............
-        .............fff777f............
-        .............f7777f.............
-        ..............fccfff............
-        ..............fbbaaf............
-        ...............ffff.............
-        ................................
-        ................................
-        ................................
-    `;
-    export const right3 = img`
-                . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
-                . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
-                . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
-                . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
-                . . . . . . . . . . . . . . . . . . . f f . . . . . . . . . . .
-                . . . . . . . . . . . . . . . . f f f 9 9 f . . . . . . . . . .
-                . . . . . . . . . . . . . f f f 9 9 9 9 9 9 f . . . . . . . . .
-                . . . . . . . . . . . . f 9 9 9 9 9 9 9 9 9 f . . . . . . . . .
-                . . . . . . . . . . . f 9 9 9 9 9 9 9 9 9 9 f . . . . . . . . .
-                . . . . . . . . . . f 9 9 9 9 9 9 9 d d 9 9 f . . . . . . . . .
-                . . . . . . . . . f 9 9 9 9 9 d d d d d d f . . . . . . . . . .
-                . . . . . . . . . f 9 9 d 9 d d d d d d d f . . . . . . . . . .
-                . . . . . . . . . f 9 9 d d d d d d d f d f . . . . . . . . . .
-                . . . . . . . . . . f 9 9 d d d d d d f d d f . . . . . . . . .
-                . . . . . . . . . . f d d d d d d d d d d f . . . . . . . . . .
-                . . . . . . . . . . . f d d d d d d d d d f . . . . . . . . . .
-                . . . . . . . . . . . . f d d d d d f d f . . . . . . . . . . .
-                . . . . . . . . . . . . . f d d d d d f . . . . . . . . . . . .
-                . . . . . . . . . . . . . . f f d d f . . . . . . . . . . . . .
-                . . . . . . . . . . . . . f 8 8 c c e e f . . . . . . . . . . .
-                . . . . . . . . . . . . f f c c c 8 d f f . . . . . . . . . . .
-                . . . . . . . . . . . f d f 8 8 8 f d d d f . . . . . . . . . .
-                . . . . . . . . . . . f f 7 c c c f f d d f . . . . . . . . . .
-                . . . . . . . . . . . . f 7 7 7 7 7 7 f f f . . . . . . . . . .
-                . . . . . . . . . . . . f c 7 7 f 7 7 f 7 b f . . . . . . . . .
-                . . . . . . . . . . . . f b a f . f f c b b f . . . . . . . . .
-                . . . . . . . . . . . . . f f f . . f b b f . . . . . . . . . .
-                . . . . . . . . . . . . . . . . . . . f f . . . . . . . . . . .
-                . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
-                . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
-                . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
-                . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
-        `;
-    export const left1 = img`
-            . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
-            . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
-            . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
-            . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
-            . . . . . . . . . . . . f f . . . . . . . . . . . . . . . . . .
-            . . . . . . . . . . . f 9 9 f f f . . . . . . . . . . . . . . .
-            . . . . . . . . . . f 9 9 9 9 9 9 f f f . . . . . . . . . . . .
-            . . . . . . . . . . f 9 9 9 9 9 9 9 9 9 f . . . . . . . . . . .
-            . . . . . . . . . . f 9 9 9 9 9 9 9 9 9 9 f . . . . . . . . . .
-            . . . . . . . . . . f 9 9 9 d 9 9 9 9 9 9 9 f . . . . . . . . .
-            . . . . . . . . . . . f d d d d d d d 9 d 9 9 f . . . . . . . .
-            . . . . . . . . . . . f d d d d d d d 9 d 9 9 f . . . . . . . .
-            . . . . . . . . . . . f d f d d d d d d d 9 9 f . . . . . . . .
-            . . . . . . . . . . f d d f d d d d d d d 9 f . . . . . . . . .
-            . . . . . . . . . . . f d d d d d d d d 9 9 f . . . . . . . . .
-            . . . . . . . . . . . f d d d d d d d d d f . . . . . . . . . .
-            . . . . . . . . . . . . f d f d d d d d f . . . . . . . . . . .
-            . . . . . . . . . . . . . f d d d d d f . . . . . . . . . . . .
-            . . . . . . . . . . . . . . f d d f f . . . . . . . . . . . . .
-            . . . . . . . . . . . . . f e 8 8 c c f . . . . . . . . . . . .
-            . . . . . . . . . . . . f d c c c 8 8 f . . . . . . . . . . . .
-            . . . . . . . . . . . f d f 8 8 8 f d d f . . . . . . . . . . .
-            . . . . . . . . . . . f d f c c c c f d f . . . . . . . . . . .
-            . . . . . . . . . . f a f f 7 7 7 7 f f . . . . . . . . . . . .
-            . . . . . . . . . . f a 7 f 7 7 f 7 7 b f . . . . . . . . . . .
-            . . . . . . . . . . f b b c f f . f b b f . . . . . . . . . . .
-            . . . . . . . . . . . f b b f . . f f f . . . . . . . . . . . .
-            . . . . . . . . . . . . f f . . . . . . . . . . . . . . . . . .
-            . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
-            . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
-            . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
-            . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
-        `;
+    // export const BoyImage =assets.image`BoyImage`;
+    // export const BoyImage =assets.image`BoyImage2`;
+    export const BoyImageRight1 =assets.image`BoyImageRight1`;
+    export const BoyImageRight2 =assets.image`BoyImageRight2`;
+    export const BoyImageRight3 =assets.image`BoyImageRight3`;
+    export const BoyImageLeft1 =assets.image`BoyImageLeft1`;
 
-    export const left2 = img`
-            . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
-            . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
-            . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
-            . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
-            . . . . . . . . . . . . f f . . . . . . . . . . . . . . . . . .
-            . . . . . . . . . . . f 9 9 f f f . . . . . . . . . . . . . . .
-            . . . . . . . . . . f 9 9 9 9 9 9 f f f . . . . . . . . . . . .
-            . . . . . . . . . . f 9 9 9 9 9 9 9 9 9 f . . . . . . . . . . .
-            . . . . . . . . . . f 9 9 9 9 9 9 9 9 9 9 f . . . . . . . . . .
-            . . . . . . . . . . f 9 9 d d 9 9 9 9 9 9 9 f . . . . . . . . .
-            . . . . . . . . . . . f d d d d d d d 9 9 9 9 f . . . . . . . .
-            . . . . . . . . . . . f d d d d d d d 9 d 9 9 f . . . . . . . .
-            . . . . . . . . . . . f d f d d d d d d d 9 9 f . . . . . . . .
-            . . . . . . . . . . f d d f d d d d d d d 9 f . . . . . . . . .
-            . . . . . . . . . . . f d d d d d d d d 9 9 f . . . . . . . . .
-            . . . . . . . . . . . f d d d d d d d d d f . . . . . . . . . .
-            . . . . . . . . . . . . f d f d d d d d f . . . . . . . . . . .
-            . . . . . . . . . . . . . f d d d d d f . . . . . . . . . . . .
-            . . . . . . . . . . . . . . f d d f f . . . . . . . . . . . . .
-            . . . . . . . . . . . . . . f 8 8 c c f . . . . . . . . . . . .
-            . . . . . . . . . . . . . f c c c 8 8 f . . . . . . . . . . . .
-            . . . . . . . . . . . . . f 8 8 8 f d d f . . . . . . . . . . .
-            . . . . . . . . . . . . . f c c c f d d f . . . . . . . . . . .
-            . . . . . . . . . . . . . f 7 7 7 f d d f . . . . . . . . . . .
-            . . . . . . . . . . . . . f 7 7 7 f f f . . . . . . . . . . . .
-            . . . . . . . . . . . . . . f 7 7 7 7 f . . . . . . . . . . . .
-            . . . . . . . . . . . . . f f f c c f . . . . . . . . . . . . .
-            . . . . . . . . . . . . . f a a b b f . . . . . . . . . . . . .
-            . . . . . . . . . . . . . . f f f f . . . . . . . . . . . . . .
-            . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
-            . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
-            . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
-        `;
+    export const BoyImageLeft2 =assets.image`BoyImageLeft2`;
 
-    export const left3 = img`
-            . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
-            . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
-            . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
-            . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
-            . . . . . . . . . . . . f f . . . . . . . . . . . . . . . . . .
-            . . . . . . . . . . . f 9 9 f f f . . . . . . . . . . . . . . .
-            . . . . . . . . . . f 9 9 9 9 9 9 f f f . . . . . . . . . . . .
-            . . . . . . . . . . f 9 9 9 9 9 9 9 9 9 f . . . . . . . . . . .
-            . . . . . . . . . . f 9 9 9 9 9 9 9 9 9 9 f . . . . . . . . . .
-            . . . . . . . . . . f 9 9 d d 9 9 9 9 9 9 9 f . . . . . . . . .
-            . . . . . . . . . . . f d d d d d d 9 9 9 9 9 f . . . . . . . .
-            . . . . . . . . . . . f d d d d d d d 9 d 9 9 f . . . . . . . .
-            . . . . . . . . . . . f d f d d d d d d d 9 9 f . . . . . . . .
-            . . . . . . . . . . f d d f d d d d d d d 9 f . . . . . . . . .
-            . . . . . . . . . . . f d d d d d d d d 9 9 f . . . . . . . . .
-            . . . . . . . . . . . f d d d d d d d d d f . . . . . . . . . .
-            . . . . . . . . . . . . f d f d d d d d f . . . . . . . . . . .
-            . . . . . . . . . . . . . f d d d d d f . . . . . . . . . . . .
-            . . . . . . . . . . . . . . f d d f f . . . . . . . . . . . . .
-            . . . . . . . . . . . . f 7 7 c c 8 8 f . . . . . . . . . . . .
-            . . . . . . . . . . . . f f d 8 c c c f f . . . . . . . . . . .
-            . . . . . . . . . . . f d d d f 8 8 8 f d f . . . . . . . . . .
-            . . . . . . . . . . . f d d f f c c c 6 f f . . . . . . . . . .
-            . . . . . . . . . . . f f f 6 6 6 6 6 6 f . . . . . . . . . . .
-            . . . . . . . . . . f b 7 f 6 6 f 7 6 c f . . . . . . . . . . .
-            . . . . . . . . . . f b b c f f . f a b f . . . . . . . . . . .
-            . . . . . . . . . . . f b b f . . f f f . . . . . . . . . . . .
-            . . . . . . . . . . . . f f . . . . . . . . . . . . . . . . . .
-            . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
-            . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
-            . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
-            . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
-        `;
+    export const BoyImageLeft3 =assets.image`BoyImageLeft3`;
 
-    export const up1 = img`
-            . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
-            . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
-            . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
-            . . . . . . . . . . . . . . . . . f f . . . . . . . . . . . . .
-            . . . . . . . . . . . . . . f f f 9 9 f . . . . . . . . . . . .
-            . . . . . . . . . . . . f f 9 9 9 9 9 9 f . . . . . . . . . . .
-            . . . . . . . . . . . f 9 9 9 9 9 9 9 9 f . . . . . . . . . . .
-            . . . . . . . . . f f 9 9 9 9 9 9 9 9 9 9 f . . . . . . . . . .
-            . . . . . . . . . f 9 9 9 9 9 9 9 9 9 9 9 f . . . . . . . . . .
-            . . . . . . . . . f 9 9 9 9 9 9 9 9 9 9 9 f . . . . . . . . . .
-            . . . . . . . . f f 9 9 9 9 9 9 9 9 9 9 9 f f . . . . . . . . .
-            . . . . . . . . f d 9 9 9 9 9 9 9 9 9 9 9 d f . . . . . . . . .
-            . . . . . . . . f d 9 9 9 9 9 9 9 9 9 9 9 f . . . . . . . . . .
-            . . . . . . . . . f d 9 9 9 9 9 9 9 9 9 d f . . . . . . . . . .
-            . . . . . . . . . f f d 9 9 9 9 9 9 9 d f f . . . . . . . . . .
-            . . . . . . . . . . f f d d d d d d d f f . . . . . . . . . . .
-            . . . . . . . . . . . . f d d d d d f . . . . . . . . . . . . .
-            . . . . . . . . . . . f 8 f f f f f 8 f . . . . . . . . . . . .
-            . . . . . . . . . . f c c 8 8 8 8 8 c c f . . . . . . . . . . .
-            . . . . . . . . . f d 8 c c c c c c c 8 d f . . . . . . . . . .
-            . . . . . . . . f d d 8 8 8 8 8 8 8 8 8 d f . . . . . . . . . .
-            . . . . . . . . f d d f c c c c c c c c d f . . . . . . . . . .
-            . . . . . . . . . f f f 7 7 7 7 7 7 7 f d f . . . . . . . . . .
-            . . . . . . . . . . f f 7 7 7 7 7 7 7 f f . . . . . . . . . . .
-            . . . . . . . . . . f b f 7 7 f 7 7 f . . . . . . . . . . . . .
-            . . . . . . . . . . . f b b f f f c c f f . . . . . . . . . . .
-            . . . . . . . . . . . . f f . . f b b a f . . . . . . . . . . .
-            . . . . . . . . . . . . . . . . f f f f . . . . . . . . . . . .
-            . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
-            . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
-            . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
-            . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
-        `;
-    export const up2 = img`
-            . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
-            . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
-            . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
-            . . . . . . . . . . . . . . . . f f . . . . . . . . . . . . . .
-            . . . . . . . . . . . . . f f f 9 9 f . . . . . . . . . . . . .
-            . . . . . . . . . . . f f 9 9 9 9 9 9 f . . . . . . . . . . . .
-            . . . . . . . . . . f 9 9 9 9 9 9 9 9 f . . . . . . . . . . . .
-            . . . . . . . . f f 9 9 9 9 9 9 9 9 9 9 f . . . . . . . . . . .
-            . . . . . . . . f 9 9 9 9 9 9 9 9 9 9 9 f . . . . . . . . . . .
-            . . . . . . . . f 9 9 9 9 9 9 9 9 9 9 9 f . . . . . . . . . . .
-            . . . . . . . f f 9 9 9 9 9 9 9 9 9 9 9 f f . . . . . . . . . .
-            . . . . . . . f d 9 9 9 9 9 9 9 9 9 9 9 d f . . . . . . . . . .
-            . . . . . . . f d 9 9 9 9 9 9 9 9 9 9 9 f . . . . . . . . . . .
-            . . . . . . . . f d 9 9 9 9 9 9 9 9 9 d f . . . . . . . . . . .
-            . . . . . . . . f f d 9 9 9 9 9 9 9 d f f . . . . . . . . . . .
-            . . . . . . . . . f f d d d d d d d f f . . . . . . . . . . . .
-            . . . . . . . . . . . f d d d d d f . . . . . . . . . . . . . .
-            . . . . . . . . . . f 8 f f f f f 8 f . . . . . . . . . . . . .
-            . . . . . . . . . f c c 8 8 8 8 8 c c f . . . . . . . . . . . .
-            . . . . . . . . . f 8 c c c c c c c 8 f . . . . . . . . . . . .
-            . . . . . . . . f d 8 8 8 8 8 8 8 8 8 d f . . . . . . . . . . .
-            . . . . . . . . f d c c c c c c c c c d f . . . . . . . . . . .
-            . . . . . . . . f d f 7 7 7 7 7 7 7 f d f . . . . . . . . . . .
-            . . . . . . . . . f f 7 7 7 7 7 7 7 f f . . . . . . . . . . . .
-            . . . . . . . . . . . f 7 7 f 7 7 f . . . . . . . . . . . . . .
-            . . . . . . . . . f f c c f f f c c f f . . . . . . . . . . . .
-            . . . . . . . . . f a b b f . f b b a f . . . . . . . . . . . .
-            . . . . . . . . . . f f f f . f f f f . . . . . . . . . . . . .
-            . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
-            . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
-            . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
-            . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
-        `;
-    export const up3 = img`
-            . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
-            . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
-            . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
-            . . . . . . . . . . . . f f . . . . . . . . . . . . . . . . . .
-            . . . . . . . . . . . f 9 9 f f f . . . . . . . . . . . . . . .
-            . . . . . . . . . . f 9 9 9 9 9 9 f f . . . . . . . . . . . . .
-            . . . . . . . . . . f 9 9 9 9 9 9 9 9 f . . . . . . . . . . . .
-            . . . . . . . . . f 9 9 9 9 9 9 9 9 9 9 f f . . . . . . . . . .
-            . . . . . . . . . f 9 9 9 9 9 9 9 9 9 9 9 f . . . . . . . . . .
-            . . . . . . . . . f 9 9 9 9 9 9 9 9 9 9 9 f . . . . . . . . . .
-            . . . . . . . . f f 9 9 9 9 9 9 9 9 9 9 9 f f . . . . . . . . .
-            . . . . . . . . f d 9 9 9 9 9 9 9 9 9 9 9 d f . . . . . . . . .
-            . . . . . . . . . f 9 9 9 9 9 9 9 9 9 9 9 d f . . . . . . . . .
-            . . . . . . . . . f d 9 9 9 9 9 9 9 9 9 d f . . . . . . . . . .
-            . . . . . . . . . f f d 9 9 9 9 9 9 9 d f f . . . . . . . . . .
-            . . . . . . . . . . f f d d d d d d d f f . . . . . . . . . . .
-            . . . . . . . . . . . . f d d d d d f . . . . . . . . . . . . .
-            . . . . . . . . . . . f 8 f f f f f 8 f . . . . . . . . . . . .
-            . . . . . . . . . . f c c 8 8 8 8 8 c c f . . . . . . . . . . .
-            . . . . . . . . . f d 8 c c c c c c c 8 d f . . . . . . . . . .
-            . . . . . . . . . f d 8 8 8 8 8 8 8 8 8 d d f . . . . . . . . .
-            . . . . . . . . . f d c c c c c c c c f d d f . . . . . . . . .
-            . . . . . . . . . f d f 7 7 7 7 7 7 7 f f f . . . . . . . . . .
-            . . . . . . . . . . f f 7 7 7 7 7 7 7 f f . . . . . . . . . . .
-            . . . . . . . . . . . . f 7 7 f 7 7 f b f . . . . . . . . . . .
-            . . . . . . . . . . f f c c f f f b b f . . . . . . . . . . . .
-            . . . . . . . . . . f a b b f . . f f . . . . . . . . . . . . .
-            . . . . . . . . . . . f f f f . . . . . . . . . . . . . . . . .
-            . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
-            . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
-            . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
-            . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
-        `;
-    export const down1 = img`
-            . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
-            . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
-            . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
-            . . . . . . . . . . . . . f f . . . . . . . . . . . . . . . . .
-            . . . . . . . . . . . . f 9 9 f f f . . . . . . . . . . . . . .
-            . . . . . . . . . . . f 9 9 9 9 9 9 f f . . . . . . . . . . . .
-            . . . . . . . . . . f 9 9 9 9 9 9 9 9 9 f . . . . . . . . . . .
-            . . . . . . . . . . f 9 9 9 9 9 9 9 9 9 9 f . . . . . . . . . .
-            . . . . . . . . . f 9 9 9 9 9 9 9 9 9 9 9 f . . . . . . . . . .
-            . . . . . . . . . f 9 9 9 d d 9 9 9 9 9 9 f . . . . . . . . . .
-            . . . . . . . . f d 9 9 d d d d d d d 9 9 9 f . . . . . . . . .
-            . . . . . . . . f d f d d f d d d f d d 9 d f . . . . . . . . .
-            . . . . . . . . f d d d d f d d d f d d d d f . . . . . . . . .
-            . . . . . . . . . f d d d d d d d d d d d f . . . . . . . . . .
-            . . . . . . . . . . f d d d d d d d d d f . . . . . . . . . . .
-            . . . . . . . . . . . f d d f f f d d f . . . . . . . . . . . .
-            . . . . . . . . . . . . f d d d d d f . . . . . . . . . . . . .
-            . . . . . . . . . . . f 8 f f d f f 8 f . . . . . . . . . . . .
-            . . . . . . . . . . f c 8 8 8 8 8 8 c c f . . . . . . . . . . .
-            . . . . . . . . . . f d c c c c c c c 8 f . . . . . . . . . . .
-            . . . . . . . . . . f d 8 8 8 8 8 8 f d f . . . . . . . . . . .
-            . . . . . . . . . . f d c c c c c f d d f . . . . . . . . . . .
-            . . . . . . . . . . . f 7 7 7 f 7 f d d f . . . . . . . . . . .
-            . . . . . . . . . . . f 7 7 f f 7 7 7 f . . . . . . . . . . . .
-            . . . . . . . . . f f f 7 7 f f 7 7 f f . . . . . . . . . . . .
-            . . . . . . . . . f a c c 7 f f f 7 7 f . . . . . . . . . . . .
-            . . . . . . . . . . f b b f . . f b b a f . . . . . . . . . . .
-            . . . . . . . . . . . f f . . . f f f f . . . . . . . . . . . .
-            . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
-            . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
-            . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
-            . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
-        `;
-    export const down2 = img`
-            . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
-            . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
-            . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
-            . . . . . . . . . . . . . f f . . . . . . . . . . . . . . . . .
-            . . . . . . . . . . . . f 9 9 f f f . . . . . . . . . . . . . .
-            . . . . . . . . . . . f 9 9 9 9 9 9 f f . . . . . . . . . . . .
-            . . . . . . . . . . f 9 9 9 9 9 9 9 9 9 f . . . . . . . . . . .
-            . . . . . . . . . . 9 9 9 9 9 9 9 9 9 9 9 f . . . . . . . . . .
-            . . . . . . . . . f 9 9 9 9 9 9 9 9 9 9 9 f . . . . . . . . . .
-            . . . . . . . . . f 9 9 d d d 9 9 9 9 9 9 f . . . . . . . . . .
-            . . . . . . . . f d 9 9 d d d d d d d 9 9 9 f . . . . . . . . .
-            . . . . . . . . f d f d d f d d d f d d 9 d f . . . . . . . . .
-            . . . . . . . . f d d d d f d d d f d d d d f . . . . . . . . .
-            . . . . . . . . . f d d d d d d d d d d d f . . . . . . . . . .
-            . . . . . . . . . . f d d d d d d d d d f . . . . . . . . . . .
-            . . . . . . . . . . . f d d f f f d d f . . . . . . . . . . . .
-            . . . . . . . . . . . . f d d d d d f . . . . . . . . . . . . .
-            . . . . . . . . . . . f 8 f f d f f 8 f . . . . . . . . . . . .
-            . . . . . . . . . . f c c 8 8 8 8 8 c c f . . . . . . . . . . .
-            . . . . . . . . . . f 8 c c c c c c c 8 f . . . . . . . . . . .
-            . . . . . . . . . f d b 8 8 8 8 8 8 8 b d f . . . . . . . . . .
-            . . . . . . . . . f d b c c c c c c c b d f . . . . . . . . . .
-            . . . . . . . . . f d b 7 7 7 f 7 7 7 b d f . . . . . . . . . .
-            . . . . . . . . . . f 7 7 7 7 f 7 7 7 7 f . . . . . . . . . . .
-            . . . . . . . . . . . f f 7 7 f 7 7 f f . . . . . . . . . . . .
-            . . . . . . . . . . . f c c f f f c c f . . . . . . . . . . . .
-            . . . . . . . . . . f a b b f . f b b a f . . . . . . . . . . .
-            . . . . . . . . . . . f f f f . f f f f . . . . . . . . . . . .
-            . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
-            . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
-            . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
-            . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
-        `;
-    export const down3 = img`
-            . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
-            . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
-            . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
-            . . . . . . . . . . . . . . . f f . . . . . . . . . . . . . . .
-            . . . . . . . . . . . f f f f 9 9 f f . . . . . . . . . . . . .
-            . . . . . . . . . . f 9 9 9 9 9 9 9 9 f . . . . . . . . . . . .
-            . . . . . . . . . . f 9 9 9 9 9 9 9 9 9 f . . . . . . . . . . .
-            . . . . . . . . . f 9 9 9 9 9 9 9 9 9 9 9 . . . . . . . . . . .
-            . . . . . . . . . f 9 9 9 d d 9 9 9 9 9 9 f . . . . . . . . . .
-            . . . . . . . . . f 9 9 d d d d d d 9 9 9 f . . . . . . . . . .
-            . . . . . . . . f d 9 d d d d d d d d 9 9 d f . . . . . . . . .
-            . . . . . . . . f d f d d f d d d f d d f d f . . . . . . . . .
-            . . . . . . . . f d d d d f d d d f d d d d f . . . . . . . . .
-            . . . . . . . . . f d d d d d d d d d d d f . . . . . . . . . .
-            . . . . . . . . . . f d d d d d d d d d f . . . . . . . . . . .
-            . . . . . . . . . . . f d d f f f d d f . . . . . . . . . . . .
-            . . . . . . . . . . . . f d d d d d f . . . . . . . . . . . . .
-            . . . . . . . . . . . f 8 f f d f f 8 f . . . . . . . . . . . .
-            . . . . . . . . . . f c c 8 8 8 8 8 8 c f . . . . . . . . . . .
-            . . . . . . . . . . f 8 c c c c c c c d f . . . . . . . . . . .
-            . . . . . . . . . . f d f 8 8 8 8 8 8 d f . . . . . . . . . . .
-            . . . . . . . . . . f d d f c c c c c d f . . . . . . . . . . .
-            . . . . . . . . . . f d d f 7 f 7 7 7 f . . . . . . . . . . . .
-            . . . . . . . . . . . f 7 7 7 f f 7 7 f . . . . . . . . . . . .
-            . . . . . . . . . . . f f 7 7 f f 7 7 f f f . . . . . . . . . .
-            . . . . . . . . . . . f 7 7 f f f 7 c c a f . . . . . . . . . .
-            . . . . . . . . . . f a b b f . . f b b f . . . . . . . . . . .
-            . . . . . . . . . . . f f f f . . . f f . . . . . . . . . . . .
-            . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
-            . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
-            . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
-            . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
-        `;
+    export const BoyImageUp1 =assets.image`BoyImageUp1`;
+    export const BoyImageUp2 =assets.image`BoyImageUp2`;
+    export const BoyImageUp3 =assets.image`BoyImageUp3`;
+    export const BoyImageDown1 =assets.image`BoyImageDown1`;
+    export const BoyImageDown2 =assets.image`BoyImageDown2`;
+    export const BoyImageDown3 =assets.image`BoyImageDown3`;
     export const idle = img`
             . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
             . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
@@ -466,36 +70,36 @@ namespace animation {
     controller.right.onEvent(ControllerButtonEvent.Pressed, function () {
         let rightAnim = animation.createAnimation(0, 150);
         animation.attachAnimation(playerSprite, rightAnim);
-        rightAnim.addAnimationFrame(customArt.right1);
-        rightAnim.addAnimationFrame(customArt.right2);
-        rightAnim.addAnimationFrame(customArt.right3);
+        rightAnim.addAnimationFrame(customArt.BoyImageRight1);
+        rightAnim.addAnimationFrame(customArt.BoyImageRight2);
+        rightAnim.addAnimationFrame(customArt.BoyImageRight3);
         animation.setAction(playerSprite, ActionKind.Walking);
     })
 
     controller.left.onEvent(ControllerButtonEvent.Pressed, function () {
         let leftAnim = animation.createAnimation(0, 150);
         animation.attachAnimation(playerSprite, leftAnim);
-        leftAnim.addAnimationFrame(customArt.left1);
-        leftAnim.addAnimationFrame(customArt.left2);
-        leftAnim.addAnimationFrame(customArt.left3);
+        leftAnim.addAnimationFrame(customArt.BoyImageLeft1);
+        leftAnim.addAnimationFrame(customArt.BoyImageLeft2);
+        leftAnim.addAnimationFrame(customArt.BoyImageLeft3);
         animation.setAction(playerSprite, ActionKind.Walking);
     })
 
     controller.up.onEvent(ControllerButtonEvent.Pressed, function () {
         let upAnim = animation.createAnimation(0, 150);
         animation.attachAnimation(playerSprite, upAnim);
-        upAnim.addAnimationFrame(customArt.up1);
-        upAnim.addAnimationFrame(customArt.up2);
-        upAnim.addAnimationFrame(customArt.up3);
+        upAnim.addAnimationFrame(customArt.BoyImageUp1);
+        upAnim.addAnimationFrame(customArt.BoyImageUp2);
+        upAnim.addAnimationFrame(customArt.BoyImageUp3);
         animation.setAction(playerSprite, ActionKind.Walking);
     })
 
     controller.down.onEvent(ControllerButtonEvent.Pressed, function () {
         let downAnim = animation.createAnimation(0, 150);
         animation.attachAnimation(playerSprite, downAnim);
-        downAnim.addAnimationFrame(customArt.down1);
-        downAnim.addAnimationFrame(customArt.down2);
-        downAnim.addAnimationFrame(customArt.down3);
+        downAnim.addAnimationFrame(customArt.BoyImageDown1);
+        downAnim.addAnimationFrame(customArt.BoyImageDown2);
+        downAnim.addAnimationFrame(customArt.BoyImageDown3);
         animation.setAction(playerSprite, ActionKind.Walking);
     })
     controller.anyButton.onEvent(ControllerButtonEvent.Released, function () {
@@ -558,7 +162,7 @@ function createLevel() {
 //     })
 // }
 function createPlayer() {
-    playerSprite = sprites.create(customArt.BoyImage, SpriteKind.Boy);
+    playerSprite = sprites.create(customArt.BoyImageDown2, SpriteKind.Boy);
     controller.moveSprite(playerSprite, 100, 100);
     info.setLife(3);
     scene.cameraFollowSprite(playerSprite);
