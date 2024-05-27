@@ -167,6 +167,9 @@ function createPlayer() {
     info.setLife(3);
     scene.cameraFollowSprite(playerSprite);
 }
+sprites.onOverlap(SpriteKind.Boy, SpriteKind.Goal, function (sprite: Sprite, otherSprite: Sprite) {
+    game.over(true);
+})
 game.splash(intro);
 // playerSelection();
 createPlayer();
