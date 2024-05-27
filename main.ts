@@ -330,3 +330,7 @@ game.splash(intro);
 // createPlayer();
 //Moved functionality to a level namespace
 // createLevel();
+
+//Call createPlayer and loadLevel functions
+player.createPlayer();
+level.loadLevel(1);
