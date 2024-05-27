@@ -139,6 +139,11 @@
         "mimeType": "image/x-mkcd-f4",
         "displayName": "ThirdTileMap"
     },
+    "image29": {
+        "data": "hwQQABAAAAAAAAAAAP//AAAAAAD/NEMPAAAA8DQzM/QAAABPMzMz8wAA8DQzMzPzAADwM/M/M/MAAE8zMzMz8wAAPzMzMzPzAAA/MzMzM/MAAE8z8z8z8wAA8DMzMzPzAADwNDMzM/MAAABPMzMz8wAAAPA0MzP0AAAAAP80Qw8AAAAAAP//AA==",
+        "mimeType": "image/x-mkcd-f4",
+        "displayName": "SlimeImage"
+    },
     "*": {
         "mimeType": "image/x-mkcd-f4",
         "dataEncoding": "base64",

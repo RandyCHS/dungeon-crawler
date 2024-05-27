@@ -40,6 +40,9 @@ namespace customArt {
     export const Chest = assets.image`ChestImage`;
     export const Wall = assets.image`WallImage`;
     export const Door = assets.image`DoorImage`;
+    export const Projectile = sprites.projectile.explosion1;
+    export const Slime = assets.image`SlimeImage`;
+
     // export const GirlImage = assets.image`GirlImage`;
     //images for boySprite animation
     // export const BoyImage =assets.image`BoyImage`;
@@ -141,6 +144,17 @@ namespace level {
             case 3: return createLevelThree();
         }
     }
+    //Generates enemies
+    function generateEnemies(): void {
+        let enemyNo = 5;
+        let enemyList = [];
+        for (let i = 0; i < enemyNo; i++) {
+            enemyList.push(sprites.create(customArt.Slime, SpriteKind.Enemy));
+        }
+        for (let enemySprite of sprites.allOfKind(SpriteKind.Enemy)) {
+            enemySprite.setPosition(Math.randomRange(20, 300), Math.randomRange(10, 220));
+        }
+    }
 }
 
 //Create namespace overlapEvents
@@ -163,6 +177,27 @@ namespace overlapEvents {
         music.baDing.play();
 
     })
+    //Overlap event for player and enemies
+    sprites.onOverlap(SpriteKind.Boy, SpriteKind.Enemy, function (sprite, otherSprite) {
+        for (let slime of sprites.allOfKind(SpriteKind.Enemy)) {
+            if (playerSprite.overlapsWith(slime)) {
+                info.changeLifeBy(-1);
+                slime.destroy();
+                music.powerDown.play();
+            }
+        }
+    })
+    //Overlap event for projectiles and enemies
+    sprites.onOverlap(SpriteKind.Projectile, SpriteKind.Enemy, function (sprite, otherSprite) {
+        for (let slime of sprites.allOfKind(SpriteKind.Enemy)) {
+            if (projectileSprite.overlapsWith(slime)) {
+                slime.destroy();
+                music.magicWand.play();
+                info.changeScoreBy(10);
+                projectileSprite.destroy();
+            }
+        }
+    })
 }
 
 //Create namespace player
@@ -173,6 +208,24 @@ namespace player {
         info.setLife(3);
         scene.cameraFollowSprite(playerSprite);
         controller.moveSprite(playerSprite, 100, 100);
+        //Implement button-combos to fire projectiles in direction player is facing
+        controller.combos.attachCombo("uA", function () {
+            projectileSprite = sprites.createProjectileFromSprite(customArt.Projectile, playerSprite, 0, -50);
+            music.pewPew.play();
+        })
+        controller.combos.attachCombo("dA", function () {
+            projectileSprite = sprites.createProjectileFromSprite(customArt.Projectile, playerSprite, 0, 50);
+            music.pewPew.play();
+        })
+        controller.combos.attachCombo("lA", function () {
+            projectileSprite = sprites.createProjectileFromSprite(customArt.Projectile, playerSprite, -50, 0);
+            music.pewPew.play();
+        })
+        controller.combos.attachCombo("rA", function () {
+            projectileSprite = sprites.createProjectileFromSprite(customArt.Projectile, playerSprite, 50, 0);
+            music.pewPew.play();
+        })
+
     }
 }
 
@@ -246,8 +299,26 @@ function setupScene(): void {
 /*
 *EventHandlers
 */
-sprites.onOverlap(SpriteKind.Boy, SpriteKind.Goal, function (sprite: Sprite, otherSprite: Sprite) {
-    game.over(true);
+//Moved functionality to a overlapEvents namespace
+// sprites.onOverlap(SpriteKind.Boy, SpriteKind.Goal, function (sprite: Sprite, otherSprite: Sprite) {
+//     game.over(true);
+// })
+
+//Enemy sprites follow player
+game.onUpdateInterval(1000, function () {
+    for (let slime of sprites.allOfKind(SpriteKind.Enemy)) {
+        // follow the player
+        if (slime.x < playerSprite.x) {
+            slime.vx = 15;
+        } else {
+            slime.vx = -15;
+        }
+        if (slime.y < playerSprite.y) {
+            slime.vy = 15;
+        } else {
+            slime.vy = -15;
+        }
+    }
 })
 
 /*
