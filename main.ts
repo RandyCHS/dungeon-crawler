@@ -113,12 +113,14 @@ namespace level {
     //Setup the scene
     function setupScene(): void {
         scene.setTile(12, customArt.Wall, true);
+        doorSprite = sprites.create(customArt.Door, SpriteKind.Goal);
+
     }
     //Creates first level
     function createLevelOne(): void {
         setupScene();
         chestSprite = sprites.create(customArt.Chest, SpriteKind.Treasure);
-        chestSprite.setPosition(50, 35);
+        chestSprite.setPosition(40, 40);
         doorSprite.setPosition(296, 8);
         scene.setTileMap(assets.image`FirstTileMap`);
     }

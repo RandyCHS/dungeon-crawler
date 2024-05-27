@@ -591,24 +591,6 @@ eeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeee
 eeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeee
 eeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeee
 `;
-            case "image13":
-            case "FirstTileMap":return img`
-c c c c c c c c c c c c c c c c c c a c 
-c . . . . . . . . c . . . . . . . . . c 
-c . b . . . . . . c . . . . . . . . . c 
-c . . . . . . . . c . . . . . . . . . c 
-c . . . . . . . . c . . . . . . . . . c 
-c . . . . . . . . c . . . . c c c c c c 
-c c c c c c c . . . . . . . . . . . . c 
-c . . . . . c . . . . . . . . . . . . c 
-c . . . . . c . . . . c . . . . . . . c 
-c . . c c c c . . . . c . . . . . . . c 
-c . . . . . . . . . . c . . . . . . . c 
-c . . . . . . . . . . c . . . . . . . c 
-c . . . . . . . . . . c . . . . . . . c 
-c . . . . . . . . . . c . . . . . . . c 
-c c c c c c c c c c c c c c c c c c c c 
-`;
             case "image14":
             case "BoyImage2":return img`
 ................................
@@ -1152,6 +1134,24 @@ f 3 3 3 3 3 3 3 3 3 3 3 3 3 3 f
 f 4 3 3 3 3 3 3 3 3 3 3 3 3 4 f 
 . f 4 3 3 3 3 3 3 3 3 3 3 4 f . 
 . . f f f f f f f f f f f f . . 
+`;
+            case "image13":
+            case "FirstTileMap":return img`
+c c c c c c c c c c c c c c c c c c a c 
+c . . . . . . . . c . . . . . . . . . c 
+c . . . . . . . . c . . . . . . . . . c 
+c . . . . . . . . c . . . . . . . . . c 
+c . . . . . . . . c . . . . . . . . . c 
+c . . . . . . . . c . . . . c c c c c c 
+c c c c c c c . . . . . . . . . . . . c 
+c . . . . . c . . . . . . . . . . . . c 
+c . . . . . c . . . . c . . . . . . . c 
+c . . c c c c . . . . c . . . . . . . c 
+c . . . . . . . . . . c . . . . . . . c 
+c . . . . . . . . . . c . . . . . . . c 
+c . . . . . . . . . . c . . . . . . . c 
+c . . . . . . . . . . c . . . . . . . c 
+c c c c c c c c c c c c c c c c c c c c 
 `;
         }
         return null;
