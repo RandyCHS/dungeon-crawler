@@ -1,9 +1,35 @@
+/*
+*Globals
+*/
+// let selectionBox: Sprite = null;
+let playerSprite: Sprite = null;
+let boySprite: Sprite = null;
+// let girlSprite: Sprite = null;
+let doorSprite: Sprite = null;
+let userName = game.askForString("What is your name?");
+let intro = "Hello, " + userName + ", you are about to embark on an adventure!";
+
+/*
+*Enumerators
+*/
+//Names for each Boy animation
+enum ActionKind {
+    Walking,
+    Idle
+}
+
+/*
+*Namespaces
+*/
+//Set the different kinds of sprites
 namespace SpriteKind {
     export const Boy = SpriteKind.create();
     export const Girl = SpriteKind.create();
     export const Treasure = SpriteKind.create();
     export const Goal = SpriteKind.create();
 }
+
+//Create images for sprites and tiles and backgrounds
 namespace customArt {
     export const Chest = assets.image`ChestImage`;
     export const Wall = assets.image`WallImage`;
@@ -27,45 +53,10 @@ namespace customArt {
     export const BoyImageDown1 =assets.image`BoyImageDown1`;
     export const BoyImageDown2 =assets.image`BoyImageDown2`;
     export const BoyImageDown3 =assets.image`BoyImageDown3`;
-    export const idle = img`
-            . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
-            . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
-            . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
-            . . . . . . . . . . . . . f f . . . . . . . . . . . . . . . . .
-            . . . . . . . . . . . . f 9 9 f f f . . . . . . . . . . . . . .
-            . . . . . . . . . . . f 9 9 9 9 9 9 f f . . . . . . . . . . . .
-            . . . . . . . . . . f 9 9 9 9 9 9 9 9 9 f . . . . . . . . . . .
-            . . . . . . . . . . 9 9 9 9 9 9 9 9 9 9 9 f . . . . . . . . . .
-            . . . . . . . . . f 9 9 9 9 9 9 9 9 9 9 9 f . . . . . . . . . .
-            . . . . . . . . . f 9 9 d d d 9 9 9 9 9 9 f . . . . . . . . . .
-            . . . . . . . . f d 9 9 d d d d d d d 9 9 9 f . . . . . . . . .
-            . . . . . . . . f d f d d f d d d f d d 9 d f . . . . . . . . .
-            . . . . . . . . f d d d d f d d d f d d d d f . . . . . . . . .
-            . . . . . . . . . f d d d d d d d d d d d f . . . . . . . . . .
-            . . . . . . . . . . f d d d d d d d d d f . . . . . . . . . . .
-            . . . . . . . . . . . f d d f f f d d f . . . . . . . . . . . .
-            . . . . . . . . . . . . f d d d d d f . . . . . . . . . . . . .
-            . . . . . . . . . . . f 8 f f d f f 8 f . . . . . . . . . . . .
-            . . . . . . . . . . f c c 8 8 8 8 8 c c f . . . . . . . . . . .
-            . . . . . . . . . . f 8 c c c c c c c 8 f . . . . . . . . . . .
-            . . . . . . . . . f d b 8 8 8 8 8 8 8 b d f . . . . . . . . . .
-            . . . . . . . . . f d b c c c c c c c b d f . . . . . . . . . .
-            . . . . . . . . . f d b 7 7 7 f 7 7 7 b d f . . . . . . . . . .
-            . . . . . . . . . . f 7 7 7 7 f 7 7 7 7 f . . . . . . . . . . .
-            . . . . . . . . . . . f f 7 7 f 7 7 f f . . . . . . . . . . . .
-            . . . . . . . . . . . f c c f f f c c f . . . . . . . . . . . .
-            . . . . . . . . . . f a b b f . f b b a f . . . . . . . . . . .
-            . . . . . . . . . . . f f f f . f f f f . . . . . . . . . . . .
-            . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
-            . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
-            . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
-            . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
-        `;
+    export const BoyImageIdle = assets.image`BoyImageDown2`;
 }
-enum ActionKind {
-    Walking,
-    Idle
-}
+
+//Create and attach animations to each movement of Boy
 namespace animation {
     controller.right.onEvent(ControllerButtonEvent.Pressed, function () {
         let rightAnim = animation.createAnimation(0, 150);
@@ -102,22 +93,18 @@ namespace animation {
         downAnim.addAnimationFrame(customArt.BoyImageDown3);
         animation.setAction(playerSprite, ActionKind.Walking);
     })
+    //for some reason this code doesn't work?
     controller.anyButton.onEvent(ControllerButtonEvent.Released, function () {
         let idleAnim = animation.createAnimation(0, 150);
         animation.attachAnimation(playerSprite, idleAnim);
-        idleAnim.addAnimationFrame(customArt.idle);
+        idleAnim.addAnimationFrame(customArt.BoyImageIdle);
         animation.setAction(playerSprite, ActionKind.Idle);
     })
 }
 
-
-let selectionBox: Sprite = null;
-let playerSprite: Sprite = null;
-let boySprite: Sprite = null;
-let girlSprite: Sprite = null;
-let doorSprite: Sprite = null;
-let userName = game.askForString("What is your name?");
-let intro = "Hello, " + userName + ", you are about to embark on an adventure!";
+/*
+*Functions
+*/
 
 function createLevel() {
     // scene.setBackgroundImage(assets.image`BedroomBackground`);
@@ -167,9 +154,17 @@ function createPlayer() {
     info.setLife(3);
     scene.cameraFollowSprite(playerSprite);
 }
+
+/*
+*EventHandlers
+*/
 sprites.onOverlap(SpriteKind.Boy, SpriteKind.Goal, function (sprite: Sprite, otherSprite: Sprite) {
     game.over(true);
 })
+
+/*
+*Main
+*/
 game.splash(intro);
 // playerSelection();
 createPlayer();
