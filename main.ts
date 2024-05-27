@@ -5,9 +5,15 @@
 let playerSprite: Sprite = null;
 let boySprite: Sprite = null;
 // let girlSprite: Sprite = null;
+let projectileSprite: Sprite = null;
+let enemySprite: Sprite = null;
+let enemyList: Sprite[] = [];
 let doorSprite: Sprite = null;
+let chestSprite: Sprite = null;
 let userName = game.askForString("What is your name?");
 let intro = "Hello, " + userName + ", you are about to embark on an adventure!";
+let loadedLevel = 1;
+let maxLevel = 3;
 
 /*
 *Enumerators
@@ -42,18 +48,15 @@ namespace customArt {
     export const BoyImageRight2 =assets.image`BoyImageRight2`;
     export const BoyImageRight3 =assets.image`BoyImageRight3`;
     export const BoyImageLeft1 =assets.image`BoyImageLeft1`;
-
     export const BoyImageLeft2 =assets.image`BoyImageLeft2`;
-
     export const BoyImageLeft3 =assets.image`BoyImageLeft3`;
-
     export const BoyImageUp1 =assets.image`BoyImageUp1`;
     export const BoyImageUp2 =assets.image`BoyImageUp2`;
     export const BoyImageUp3 =assets.image`BoyImageUp3`;
     export const BoyImageDown1 =assets.image`BoyImageDown1`;
     export const BoyImageDown2 =assets.image`BoyImageDown2`;
     export const BoyImageDown3 =assets.image`BoyImageDown3`;
-    export const BoyImageIdle = assets.image`BoyImageDown2`;
+    export const BoyImageIdle = BoyImageDown2;
 }
 
 //Create and attach animations to each movement of Boy
@@ -102,20 +105,94 @@ namespace animation {
     })
 }
 
+//Setup the levels
+namespace level {
+    //Setup the scene
+    function setupScene(): void {
+        scene.setTile(12, customArt.Wall, true);
+    }
+    //Creates first level
+    function createLevelOne(): void {
+        setupScene();
+        chestSprite = sprites.create(customArt.Chest, SpriteKind.Treasure);
+        chestSprite.setPosition(50, 35);
+        doorSprite.setPosition(296, 8);
+        scene.setTileMap(assets.image`FirstTileMap`);
+    }
+
+    //Creates second level
+    function createLevelTwo(): void {
+        setupScene();
+        doorSprite.setPosition(184, 8);
+        scene.setTileMap(assets.image`SecondTileMap`);
+    }
+
+    //Creates third level
+    function createLevelThree(): void {
+        setupScene();
+        doorSprite.setPosition(200, 8);
+        scene.setTileMap(assets.image`ThirdTileMap`);
+    }
+    //Loads called level
+    export function loadLevel(index: number): void {
+        switch (index) {
+            case 1: return createLevelOne();
+            case 2: return createLevelTwo();
+            case 3: return createLevelThree();
+        }
+    }
+}
+
+//Create namespace overlapEvents
+namespace overlapEvents {
+    //Overlap event for player and goal
+    sprites.onOverlap(SpriteKind.Boy, SpriteKind.Goal, function (sprite: Sprite, otherSprite: Sprite) {
+        if (loadedLevel === maxLevel) {
+            game.over(true);
+        }
+        else {
+            doorSprite.destroy();
+            loadedLevel++;
+            level.loadLevel(loadedLevel);
+        }
+    })
+    //Overlap event for player and treasure
+    sprites.onOverlap(SpriteKind.Boy, SpriteKind.Treasure, function (sprite: Sprite, otherSprite: Sprite) {
+        chestSprite.destroy();
+        info.changeScoreBy(100);
+        music.baDing.play();
+
+    })
+}
+
+//Create namespace player
+namespace player {
+    //Create player sprite and initializes its properties
+    export function createPlayer() {
+        playerSprite = sprites.create(customArt.BoyImageIdle, SpriteKind.Boy);
+        info.setLife(3);
+        scene.cameraFollowSprite(playerSprite);
+        controller.moveSprite(playerSprite, 100, 100);
+    }
+}
+
 /*
 *Functions
 */
 
-function createLevel() {
-    // scene.setBackgroundImage(assets.image`BedroomBackground`);
-    scene.setBackgroundImage(assets.image`TealBackground`);
-    scene.setTileMap(assets.image`FirstTileMap`);
-    scene.setTile(11, customArt.Chest, true);
-    scene.setTile(12, customArt.Wall, true);
-    doorSprite = sprites.create(customArt.Door, SpriteKind.Goal);
-    doorSprite.setPosition(296, 8);
-    // controller.moveSprite(playerSprite, 100, 100);
-}
+//Moved functionality to a level namespace
+// function createLevel() {
+//     // scene.setBackgroundImage(assets.image`BedroomBackground`);
+//     scene.setBackgroundImage(assets.image`TealBackground`);
+//     scene.setTileMap(assets.image`FirstTileMap`);
+//     scene.setTile(11, customArt.Chest, true);
+//     scene.setTile(12, customArt.Wall, true);
+//     doorSprite = sprites.create(customArt.Door, SpriteKind.Goal);
+//     doorSprite.setPosition(296, 8);
+//     // controller.moveSprite(playerSprite, 100, 100);
+// }
+
+//Not implemented in this version
 // function playerSelection() {
 //     game.splash("Select a player character.");
 //     scene.setBackgroundImage(assets.image`PlayerSelect`);
@@ -148,11 +225,22 @@ function createLevel() {
 //         }
 //     })
 // }
-function createPlayer() {
-    playerSprite = sprites.create(customArt.BoyImageDown2, SpriteKind.Boy);
-    controller.moveSprite(playerSprite, 100, 100);
-    info.setLife(3);
-    scene.cameraFollowSprite(playerSprite);
+
+//Moved functionality to a player namespace
+// //Creates the Player Sprite
+// function createPlayer() {
+//     playerSprite = sprites.create(customArt.BoyImageDown2, SpriteKind.Boy);
+//     controller.moveSprite(playerSprite, 100, 100);
+//     info.setLife(3);
+//     scene.cameraFollowSprite(playerSprite);
+// }
+
+// Sets up the background, sprites and tiles for our levels
+function setupScene(): void {
+    scene.setTile(12, customArt.Wall, true);
+    scene.setBackgroundImage(assets.image`TealBackground`);
+    doorSprite = sprites.create(customArt.Door, SpriteKind.Goal);
+    playerSprite.setPosition(45, 200);
 }
 
 /*
@@ -167,5 +255,7 @@ sprites.onOverlap(SpriteKind.Boy, SpriteKind.Goal, function (sprite: Sprite, oth
 */
 game.splash(intro);
 // playerSelection();
-createPlayer();
-createLevel();
+//Moved functionality to a player namespace
+// createPlayer();
+//Moved functionality to a level namespace
+// createLevel();
