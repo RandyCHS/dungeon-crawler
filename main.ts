@@ -37,16 +37,15 @@ namespace SpriteKind {
 
 //Create images for sprites and tiles and backgrounds
 namespace customArt {
+    //images for tilemaps
     export const Chest = assets.image`ChestImage`;
     export const Wall = assets.image`WallImage`;
     export const Door = assets.image`DoorImage`;
+
     export const Projectile = sprites.projectile.explosion1;
     export const Slime = assets.image`SlimeImage`;
 
-    // export const GirlImage = assets.image`GirlImage`;
     //images for boySprite animation
-    // export const BoyImage =assets.image`BoyImage`;
-    // export const BoyImage =assets.image`BoyImage2`;
     export const BoyImageRight1 =assets.image`BoyImageRight1`;
     export const BoyImageRight2 =assets.image`BoyImageRight2`;
     export const BoyImageRight3 =assets.image`BoyImageRight3`;
@@ -60,6 +59,7 @@ namespace customArt {
     export const BoyImageDown2 =assets.image`BoyImageDown2`;
     export const BoyImageDown3 =assets.image`BoyImageDown3`;
     export const BoyImageIdle = BoyImageDown2;
+    // export const GirlImage = assets.image`GirlImage`;
 }
 
 //Create and attach animations to each movement of Boy
@@ -235,61 +235,6 @@ namespace player {
 *Functions
 */
 
-//Moved functionality to a level namespace
-// function createLevel() {
-//     // scene.setBackgroundImage(assets.image`BedroomBackground`);
-//     scene.setBackgroundImage(assets.image`TealBackground`);
-//     scene.setTileMap(assets.image`FirstTileMap`);
-//     scene.setTile(11, customArt.Chest, true);
-//     scene.setTile(12, customArt.Wall, true);
-//     doorSprite = sprites.create(customArt.Door, SpriteKind.Goal);
-//     doorSprite.setPosition(296, 8);
-//     // controller.moveSprite(playerSprite, 100, 100);
-// }
-
-//Not implemented in this version
-// function playerSelection() {
-//     game.splash("Select a player character.");
-//     scene.setBackgroundImage(assets.image`PlayerSelect`);
-//     boySprite = sprites.create(assets.image`BoyHeadImage`, SpriteKind.Boy);
-//     girlSprite = sprites.create(assets.image`GirlHeadImage`, SpriteKind.Girl);
-//     selectionBox = sprites.create(assets.image`SelectionBoxImage`, SpriteKind.Player);
-//     boySprite.setPosition(65, 65);
-//     girlSprite.setPosition(95, 65);
-//     selectionBox.setPosition(65, 65);
-//     controller.left.onEvent(ControllerButtonEvent.Pressed, function () {
-//         selectionBox.setPosition(65, 65);
-//     })
-//     controller.right.onEvent(ControllerButtonEvent.Pressed, function () {
-//         selectionBox.setPosition(95, 65);
-//     })
-//     info.startCountdown(5);
-//     info.onCountdownEnd(function () {
-//         boySprite.destroy();
-//         girlSprite.destroy();
-//         selectionBox.destroy();
-//         if (boySprite.x == selectionBox.x) {
-//             playerSprite = sprites.create(assets.image`BoyImage`, SpriteKind.Boy);
-//             info.stopCountdown();
-//             createLevel();
-//         }
-//         if (girlSprite.x == selectionBox.x) {
-//             playerSprite = sprites.create(assets.image`GirlImage`, SpriteKind.Girl);
-//             info.stopCountdown();
-//             createLevel();
-//         }
-//     })
-// }
-
-//Moved functionality to a player namespace
-// //Creates the Player Sprite
-// function createPlayer() {
-//     playerSprite = sprites.create(customArt.BoyImageDown2, SpriteKind.Boy);
-//     controller.moveSprite(playerSprite, 100, 100);
-//     info.setLife(3);
-//     scene.cameraFollowSprite(playerSprite);
-// }
-
 // Sets up the background, sprites and tiles for our levels
 function setupScene(): void {
     scene.setTile(12, customArt.Wall, true);
@@ -301,10 +246,6 @@ function setupScene(): void {
 /*
 *EventHandlers
 */
-//Moved functionality to a overlapEvents namespace
-// sprites.onOverlap(SpriteKind.Boy, SpriteKind.Goal, function (sprite: Sprite, otherSprite: Sprite) {
-//     game.over(true);
-// })
 
 //Enemy sprites follow player
 game.onUpdateInterval(1000, function () {
@@ -327,11 +268,6 @@ game.onUpdateInterval(1000, function () {
 *Main
 */
 game.splash(intro);
-// playerSelection();
-//Moved functionality to a player namespace
-// createPlayer();
-//Moved functionality to a level namespace
-// createLevel();
 
 //Call createPlayer and loadLevel functions
 player.createPlayer();
