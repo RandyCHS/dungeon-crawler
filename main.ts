@@ -241,6 +241,7 @@ namespace player {
         scene.cameraFollowSprite(playerSprite);
         controller.moveSprite(playerSprite, 100, 100);
         //Implement button-combos to fire projectiles in direction player is facing
+        //Eventually implement by checking for direction player is facing using the animation namespace
         controller.combos.attachCombo("uA", function () {
             projectileSprite = sprites.createProjectileFromSprite(customArt.Projectile, playerSprite, 0, -50);
             music.pewPew.play();
