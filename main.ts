@@ -1,4 +1,10 @@
 /*
+*Constants
+*/
+const TILE_SIZE = 16;
+
+
+/*
 *Globals
 */
 // let selectionBox: Sprite = null;
