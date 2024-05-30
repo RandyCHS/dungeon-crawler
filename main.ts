@@ -21,6 +21,30 @@ let loadedLevel = 1;
 let maxLevel = 3;
 
 /*
+*Classes
+*/
+class PlayerSprite extends sprites.ExtendableSprite {
+    constructor(image: Image, kind: number) {
+        super(image, kind);
+
+    }
+}
+
+class EnemySprite extends sprites.ExtendableSprite {
+    constructor(image: Image, kind: number) {
+        super(image, kind);
+
+    }
+}
+
+class BoySprite extends PlayerSprite {
+    constructor(image: Image, kind: number) {
+        super(image, kind);
+    }
+
+}
+
+/*
 *Enumerators
 */
 //Names for each Boy animation
@@ -152,11 +176,11 @@ namespace level {
         }
     }
     //Generates enemies
-    function generateEnemies(): void {
+    export function generateEnemies(): void {
         let enemyNo = 5;
         let enemyList = [];
         for (let i = 0; i < enemyNo; i++) {
-            enemyList.push(sprites.create(customArt.Slime, SpriteKind.Enemy));
+            enemyList.push(new EnemySprite(customArt.Slime, SpriteKind.Enemy));
         }
         for (let enemySprite of sprites.allOfKind(SpriteKind.Enemy)) {
             enemySprite.setPosition(Math.randomRange(20, 300), Math.randomRange(10, 220));
@@ -211,7 +235,8 @@ namespace overlapEvents {
 namespace player {
     //Create player sprite and initializes its properties
     export function createPlayer() {
-        playerSprite = sprites.create(customArt.BoyImageIdle, SpriteKind.Boy);
+        // playerSprite = sprites.create(customArt.BoyImageIdle, SpriteKind.Boy);
+        playerSprite = new BoySprite(customArt.BoyImageIdle, SpriteKind.Boy);
         info.setLife(3);
         scene.cameraFollowSprite(playerSprite);
         controller.moveSprite(playerSprite, 100, 100);
@@ -277,3 +302,4 @@ game.splash(intro);
 //Call createPlayer and loadLevel functions
 player.createPlayer();
 level.loadLevel(1);
+level.generateEnemies();
