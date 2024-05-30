@@ -3,7 +3,6 @@
 */
 const TILE_SIZE = 16;
 
-
 /*
 *Globals
 */
