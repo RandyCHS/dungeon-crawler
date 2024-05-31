@@ -145,36 +145,7 @@ namespace level {
         doorSprite = sprites.create(customArt.Door, SpriteKind.Goal);
 
     }
-    //Creates first level
-    function createLevelOne(): void {
-        setupScene();
-        chestSprite = sprites.create(customArt.Chest, SpriteKind.Treasure);
-        chestSprite.setPosition(40, 40);
-        doorSprite.setPosition(296, 8);
-        scene.setTileMap(assets.image`FirstTileMap`);
-    }
 
-    //Creates second level
-    function createLevelTwo(): void {
-        setupScene();
-        doorSprite.setPosition(184, 8);
-        scene.setTileMap(assets.image`SecondTileMap`);
-    }
-
-    //Creates third level
-    function createLevelThree(): void {
-        setupScene();
-        doorSprite.setPosition(200, 8);
-        scene.setTileMap(assets.image`ThirdTileMap`);
-    }
-    //Loads called level
-    export function loadLevel(index: number): void {
-        switch (index) {
-            case 1: return createLevelOne();
-            case 2: return createLevelTwo();
-            case 3: return createLevelThree();
-        }
-    }
     //Generates enemies
     export function generateEnemies(): void {
         let enemyNo = 5;
@@ -184,6 +155,40 @@ namespace level {
         }
         for (let enemySprite of sprites.allOfKind(SpriteKind.Enemy)) {
             enemySprite.setPosition(Math.randomRange(20, 300), Math.randomRange(10, 220));
+        }
+    }
+
+    //Creates first level
+    function createLevelOne(): void {
+        setupScene();
+        chestSprite = sprites.create(customArt.Chest, SpriteKind.Treasure);
+        chestSprite.setPosition(40, 40);
+        doorSprite.setPosition(296, 8);
+        generateEnemies();
+        scene.setTileMap(assets.image`FirstTileMap`);
+    }
+
+    //Creates second level
+    function createLevelTwo(): void {
+        setupScene();
+        doorSprite.setPosition(184, 8);
+        scene.setTileMap(assets.image`SecondTileMap`);
+        generateEnemies();
+    }
+
+    //Creates third level
+    function createLevelThree(): void {
+        setupScene();
+        doorSprite.setPosition(200, 8);
+        scene.setTileMap(assets.image`ThirdTileMap`);
+        generateEnemies();
+    }
+    //Loads called level
+    export function loadLevel(index: number): void {
+        switch (index) {
+            case 1: return createLevelOne();
+            case 2: return createLevelTwo();
+            case 3: return createLevelThree();
         }
     }
 }
@@ -303,4 +308,4 @@ game.splash(intro);
 //Call createPlayer and loadLevel functions
 player.createPlayer();
 level.loadLevel(1);
-level.generateEnemies();
+// level.generateEnemies();
