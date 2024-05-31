@@ -240,7 +240,7 @@ namespace player {
         info.setLife(3);
         scene.cameraFollowSprite(playerSprite);
         controller.moveSprite(playerSprite, 100, 100);
-        //Implement button-combos to fire projectiles in direction player is facing
+        //Check animation image to fire projectiles in direction player is facing
         controller.A.onEvent(ControllerButtonEvent.Pressed, function () {
             if (playerSprite.image == customArt.BoyImageRight1 || playerSprite.image == customArt.BoyImageRight2 || playerSprite.image == customArt.BoyImageRight3) {
                 projectileSprite = sprites.createProjectileFromSprite(customArt.Projectile, playerSprite, 50, 0);
