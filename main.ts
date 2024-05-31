@@ -162,8 +162,11 @@ namespace level {
     function createLevelOne(): void {
         setupScene();
         chestSprite = sprites.create(customArt.Chest, SpriteKind.Treasure);
-        chestSprite.setPosition(40, 40);
-        doorSprite.setPosition(296, 8);
+        // chestSprite.setPosition(40, 40);
+        tiles.placeOnTile(chestSprite, tiles.getTileLocation(2, 2));
+        //Create chest tile instead of sprite
+        // scene.setTile(11, customArt.Chest, true);
+         doorSprite.setPosition(296, 8);
         generateEnemies();
         scene.setTileMap(assets.image`FirstTileMap`);
     }
