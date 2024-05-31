@@ -241,24 +241,24 @@ namespace player {
         scene.cameraFollowSprite(playerSprite);
         controller.moveSprite(playerSprite, 100, 100);
         //Implement button-combos to fire projectiles in direction player is facing
-        //Eventually implement by checking for direction player is facing using the animation namespace
-        controller.combos.attachCombo("uA", function () {
-            projectileSprite = sprites.createProjectileFromSprite(customArt.Projectile, playerSprite, 0, -50);
-            music.pewPew.play();
+        controller.A.onEvent(ControllerButtonEvent.Pressed, function () {
+            if (playerSprite.image == customArt.BoyImageRight1 || playerSprite.image == customArt.BoyImageRight2 || playerSprite.image == customArt.BoyImageRight3) {
+                projectileSprite = sprites.createProjectileFromSprite(customArt.Projectile, playerSprite, 50, 0);
+                music.pewPew.play();
+            }
+            else if (playerSprite.image == customArt.BoyImageLeft1 || playerSprite.image == customArt.BoyImageLeft2 || playerSprite.image == customArt.BoyImageLeft3) {
+                projectileSprite = sprites.createProjectileFromSprite(customArt.Projectile, playerSprite, -50, 0);
+                music.pewPew.play();
+            }
+            else if (playerSprite.image == customArt.BoyImageUp1 || playerSprite.image == customArt.BoyImageUp2 || playerSprite.image == customArt.BoyImageUp3) {
+                projectileSprite = sprites.createProjectileFromSprite(customArt.Projectile, playerSprite, 0, -50);
+                music.pewPew.play();
+            }
+            else if (playerSprite.image == customArt.BoyImageDown1 || playerSprite.image == customArt.BoyImageDown2 || playerSprite.image == customArt.BoyImageDown3) {
+                projectileSprite = sprites.createProjectileFromSprite(customArt.Projectile, playerSprite, 0, 50);
+                music.pewPew.play();
+            }
         })
-        controller.combos.attachCombo("dA", function () {
-            projectileSprite = sprites.createProjectileFromSprite(customArt.Projectile, playerSprite, 0, 50);
-            music.pewPew.play();
-        })
-        controller.combos.attachCombo("lA", function () {
-            projectileSprite = sprites.createProjectileFromSprite(customArt.Projectile, playerSprite, -50, 0);
-            music.pewPew.play();
-        })
-        controller.combos.attachCombo("rA", function () {
-            projectileSprite = sprites.createProjectileFromSprite(customArt.Projectile, playerSprite, 50, 0);
-            music.pewPew.play();
-        })
-
     }
 }
 
