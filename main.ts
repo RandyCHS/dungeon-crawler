@@ -21,7 +21,8 @@ let loadedLevel = 1;
 let maxLevel = 3;
 
 /*
-*Classes
+*Classes:
+* These will allow us to create new sprites with different properties (Copilot)
 */
 class PlayerSprite extends sprites.ExtendableSprite {
     constructor(image: Image, kind: number) {
@@ -162,9 +163,9 @@ namespace level {
     function createLevelOne(): void {
         setupScene();
         chestSprite = sprites.create(customArt.Chest, SpriteKind.Treasure);
-        // chestSprite.setPosition(40, 40);
         tiles.placeOnTile(chestSprite, tiles.getTileLocation(2, 2));
         //Create chest tile instead of sprite
+        //However, this code doesn't work because it doesn't allow for the chest to be interacted with by the player sprite(Copilot)
         // scene.setTile(11, customArt.Chest, true);
          doorSprite.setPosition(296, 8);
         generateEnemies();
@@ -243,7 +244,6 @@ namespace overlapEvents {
 namespace player {
     //Create player sprite and initializes its properties
     export function createPlayer() {
-        // playerSprite = sprites.create(customArt.BoyImageIdle, SpriteKind.Boy);
         playerSprite = new BoySprite(customArt.BoyImageIdle, SpriteKind.Boy);
         info.setLife(3);
         scene.cameraFollowSprite(playerSprite);
@@ -311,4 +311,3 @@ game.splash(intro);
 //Call createPlayer and loadLevel functions
 player.createPlayer();
 level.loadLevel(1);
-// level.generateEnemies();
