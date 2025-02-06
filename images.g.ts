@@ -1153,6 +1153,25 @@ c . . . . . . . . . . c . . . . . . . c
 c . . . . . . . . . . c . . . . . . . c 
 c c c c c c c c c c c c c c c c c c c c 
 `;
+            case "image30":
+            case "SlimeImage1":return img`
+. . . . . . . . . . . . . . . . 
+. . . . . . . . . . . . . . . . 
+. . . . . . . . . . . . . . . . 
+. . . . . . . . . . . . . . . . 
+. . . . . . f f f f . . . . . . 
+. . . . f f 4 b b 4 f f . . . . 
+. . . f 4 b b b b b b 4 f . . . 
+. . f 4 b b b b b b b b 4 f . . 
+. f 4 b b b b b b b b b b 4 f . 
+. f b b b f b b b f b b b b f . 
+f 4 b b b f b b b f b b b b 4 f 
+f b b b b b b b b b b b b b b f 
+f b b b b b b b b b b b b b b f 
+f 4 b b b b b b b b b b b b 4 f 
+. f 4 b b b b b b b b b b 4 f . 
+. . f f f f f f f f f f f f . . 
+`;
         }
         return null;
     })

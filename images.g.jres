@@ -144,6 +144,11 @@
         "mimeType": "image/x-mkcd-f4",
         "displayName": "FirstTileMap"
     },
+    "image30": {
+        "data": "hwQQABAAAAAAAAAAAP//AAAAAAD/tEsPAAAA8LS7u/QAAABPu7u7+wAA8LS7u7v7AADwu/u/u/sAAE+7u7u7+wAAv7u7u7v7AAC/u7u7u/sAAE+7+7+7+wAA8Lu7u7v7AADwtLu7u/sAAABPu7u7+wAAAPC0u7v0AAAAAP+0Sw8AAAAAAP//AA==",
+        "mimeType": "image/x-mkcd-f4",
+        "displayName": "SlimeImage1"
+    },
     "*": {
         "mimeType": "image/x-mkcd-f4",
         "dataEncoding": "base64",
