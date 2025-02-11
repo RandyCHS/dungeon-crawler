@@ -22,7 +22,7 @@ let maxLevel = 3;
 
 /*
 *Classes:
-* These will allow us to create new sprites with different properties (Copilot)
+* These will allow us to create new sprites with different properties
 */
 class PlayerSprite extends sprites.ExtendableSprite {
     constructor(image: Image, kind: number) {
@@ -165,7 +165,7 @@ namespace level {
         chestSprite = sprites.create(customArt.Chest, SpriteKind.Treasure);
         tiles.placeOnTile(chestSprite, tiles.getTileLocation(2, 2));
         //Create chest tile instead of sprite
-        //However, this code doesn't work because it doesn't allow for the chest to be interacted with by the player sprite(Copilot)
+        //However, this code doesn't work because it doesn't allow for the chest to be interacted with by the player sprite
         // scene.setTile(11, customArt.Chest, true);
          doorSprite.setPosition(296, 8);
         generateEnemies();
@@ -241,7 +241,7 @@ namespace overlapEvents {
 }
 
 //Create namespace projectile
-//This code doesn't work because it doesn't allow for the projectile to be fired in the direction the player is facing(Copilot)
+//This code doesn't work because it doesn't allow for the projectile to be fired in the direction the player is facing
 namespace projectile {
     //Create projectile sprite and initializes its properties
     export function createProjectile() {
@@ -260,7 +260,7 @@ namespace player {
         scene.cameraFollowSprite(playerSprite);
         controller.moveSprite(playerSprite, 100, 100);
         // Check animation image to fire projectiles in direction player is facing
-        // Instead of using the controller.A.onEvent(ControllerButtonEvent.Pressed, function () { }) function, we can use the controller.A.onEvent(ControllerButtonEvent.Pressed, function () { }) function to check the player's current image and fire the projectile in the direction the player is facing(Copilot)
+        // Instead of using the controller.A.onEvent(ControllerButtonEvent.Pressed, function () { }) function, we can use the controller.A.onEvent(ControllerButtonEvent.Pressed, function () { }) function to check the player's current image and fire the projectile in the direction the player is facing
         controller.A.onEvent(ControllerButtonEvent.Pressed, function () {
             if (playerSprite.image == customArt.BoyImageRight1 || playerSprite.image == customArt.BoyImageRight2 || playerSprite.image == customArt.BoyImageRight3) {
                 projectileSprite = sprites.createProjectileFromSprite(customArt.Projectile, playerSprite, 50, 0);
