@@ -597,7 +597,7 @@ const pxsim_pxtrt = pxsim.pxtrt;
 const pxsim_numops = pxsim.numops;
 
 
-function _main___P26005(s) {
+function _main___P26205(s) {
 let r0 = s.r0, step = s.pc;
 s.pc = -1;
 
@@ -1498,13 +1498,13 @@ switch (step) {
     return leave(s, r0)
   default: oops()
 } } }
-_main___P26005.info = {"start":0,"length":0,"line":0,"column":0,"endLine":0,"endColumn":0,"fileName":"main.ts","functionName":"<main>","argumentNames":[]}
-_main___P26005.continuations = [ 55,56 ]
+_main___P26205.info = {"start":0,"length":0,"line":0,"column":0,"endLine":0,"endColumn":0,"fileName":"main.ts","functionName":"<main>","argumentNames":[]}
+_main___P26205.continuations = [ 55,56 ]
 
-function _main___P26005_mk(s) {
+function _main___P26205_mk(s) {
     checkStack(s.depth);
     return {
-        parent: s, fn: _main___P26005, depth: s.depth + 1,
+        parent: s, fn: _main___P26205, depth: s.depth + 1,
         pc: 0, retval: undefined, r0: undefined, overwrittenPC: false, lambdaArgs: null,
   tmp_0: undefined,
   tmp_1: undefined,
@@ -3080,8 +3080,8 @@ switch (step) {
   case 0:
 
     s.slime___7375 = undefined;
-    s.unnamed150___U1 = undefined;
-    s.unnamed151___U2 = undefined;
+    s.unnamed214___U1 = undefined;
+    s.unnamed215___U2 = undefined;
     if (s.lambdaArgs) {
       s.arg0 = (s.lambdaArgs[0]);
       s.arg1 = (s.lambdaArgs[1]);
@@ -3093,15 +3093,15 @@ switch (step) {
     s.callLocIdx = 178; s.pc = 5; return s.tmp_0;
   case 5:
     r0 = s.retval;
-    s.unnamed150___U1 = (r0);
-    s.unnamed151___U2 = (0);
+    s.unnamed214___U1 = (r0);
+    s.unnamed215___U2 = (0);
   case 1:
-    s.tmp_0 = r0 = s.unnamed151___U2;
-    r0 = pxsim_Array__length(s.unnamed150___U1);
+    s.tmp_0 = r0 = s.unnamed215___U2;
+    r0 = pxsim_Array__length(s.unnamed214___U1);
     s.tmp_1 = r0;
     r0 = (s.tmp_0 < s.tmp_1);
     if (!r0) { step = 4; continue; }
-    r0 = pxsim_Array__getAt(s.unnamed150___U1, s.unnamed151___U2);
+    r0 = pxsim_Array__getAt(s.unnamed214___U1, s.unnamed215___U2);
     s.slime___7375 = (r0);
     s.tmp_3 = Sprite_overlapsWith__P2435_mk(s);
     s.tmp_3.arg0 = globals.playerSprite___4446;
@@ -3132,11 +3132,11 @@ switch (step) {
     r0 = s.retval;
   case 2:
   case 3:
-    r0 = (s.unnamed151___U2 + 1);
-    s.unnamed151___U2 = (r0);
+    r0 = (s.unnamed215___U2 + 1);
+    s.unnamed215___U2 = (r0);
     { step = 1; continue; }
   case 4:
-    s.unnamed150___U1 = (undefined);
+    s.unnamed214___U1 = (undefined);
     r0 = undefined;
     return leave(s, r0)
   default: oops()
@@ -3154,8 +3154,8 @@ function overlapEvents_inline__P7371_mk(s) {
   tmp_3: undefined,
   tmp_4: undefined,
   slime___7375: undefined,
-  unnamed150___U1: undefined,
-  unnamed151___U2: undefined,
+  unnamed214___U1: undefined,
+  unnamed215___U2: undefined,
   arg0: undefined,
   arg1: undefined,
 } }
@@ -3175,8 +3175,8 @@ switch (step) {
   case 0:
 
     s.slime___7398 = undefined;
-    s.unnamed152___U1 = undefined;
-    s.unnamed153___U2 = undefined;
+    s.unnamed216___U1 = undefined;
+    s.unnamed217___U2 = undefined;
     if (s.lambdaArgs) {
       s.arg0 = (s.lambdaArgs[0]);
       s.arg1 = (s.lambdaArgs[1]);
@@ -3188,15 +3188,15 @@ switch (step) {
     s.callLocIdx = 184; s.pc = 5; return s.tmp_0;
   case 5:
     r0 = s.retval;
-    s.unnamed152___U1 = (r0);
-    s.unnamed153___U2 = (0);
+    s.unnamed216___U1 = (r0);
+    s.unnamed217___U2 = (0);
   case 1:
-    s.tmp_0 = r0 = s.unnamed153___U2;
-    r0 = pxsim_Array__length(s.unnamed152___U1);
+    s.tmp_0 = r0 = s.unnamed217___U2;
+    r0 = pxsim_Array__length(s.unnamed216___U1);
     s.tmp_1 = r0;
     r0 = (s.tmp_0 < s.tmp_1);
     if (!r0) { step = 4; continue; }
-    r0 = pxsim_Array__getAt(s.unnamed152___U1, s.unnamed153___U2);
+    r0 = pxsim_Array__getAt(s.unnamed216___U1, s.unnamed217___U2);
     s.slime___7398 = (r0);
     s.tmp_3 = Sprite_overlapsWith__P2435_mk(s);
     s.tmp_3.arg0 = globals.projectileSprite___4448;
@@ -3234,11 +3234,11 @@ switch (step) {
     r0 = s.retval;
   case 2:
   case 3:
-    r0 = (s.unnamed153___U2 + 1);
-    s.unnamed153___U2 = (r0);
+    r0 = (s.unnamed217___U2 + 1);
+    s.unnamed217___U2 = (r0);
     { step = 1; continue; }
   case 4:
-    s.unnamed152___U1 = (undefined);
+    s.unnamed216___U1 = (undefined);
     r0 = undefined;
     return leave(s, r0)
   default: oops()
@@ -3256,8 +3256,8 @@ function overlapEvents_inline__P7394_mk(s) {
   tmp_3: undefined,
   tmp_4: undefined,
   slime___7398: undefined,
-  unnamed152___U1: undefined,
-  unnamed153___U2: undefined,
+  unnamed216___U1: undefined,
+  unnamed217___U2: undefined,
   arg0: undefined,
   arg1: undefined,
 } }
@@ -3277,23 +3277,23 @@ switch (step) {
   case 0:
 
     s.slime___7419 = undefined;
-    s.unnamed154___U1 = undefined;
-    s.unnamed155___U2 = undefined;
+    s.unnamed218___U1 = undefined;
+    s.unnamed219___U2 = undefined;
     s.slime___7419 = (undefined);
     s.tmp_0 = sprites_allOfKind__P2292_mk(s);
     s.tmp_0.arg0 = globals.Enemy___2499;
     s.callLocIdx = 220; s.pc = 7; return s.tmp_0;
   case 7:
     r0 = s.retval;
-    s.unnamed154___U1 = (r0);
-    s.unnamed155___U2 = (0);
+    s.unnamed218___U1 = (r0);
+    s.unnamed219___U2 = (0);
   case 1:
-    s.tmp_0 = r0 = s.unnamed155___U2;
-    r0 = pxsim_Array__length(s.unnamed154___U1);
+    s.tmp_0 = r0 = s.unnamed219___U2;
+    r0 = pxsim_Array__length(s.unnamed218___U1);
     s.tmp_1 = r0;
     r0 = (s.tmp_0 < s.tmp_1);
     if (!r0) { step = 6; continue; }
-    r0 = pxsim_Array__getAt(s.unnamed154___U1, s.unnamed155___U2);
+    r0 = pxsim_Array__getAt(s.unnamed218___U1, s.unnamed219___U2);
     s.slime___7419 = (r0);
     s.tmp_4 = Sprite_x__P2368_mk(s);
     s.tmp_4.arg0 = s.slime___7419;
@@ -3357,11 +3357,11 @@ switch (step) {
   case 15:
     r0 = s.retval;
   case 5:
-    r0 = (s.unnamed155___U2 + 1);
-    s.unnamed155___U2 = (r0);
+    r0 = (s.unnamed219___U2 + 1);
+    s.unnamed219___U2 = (r0);
     { step = 1; continue; }
   case 6:
-    s.unnamed154___U1 = (undefined);
+    s.unnamed218___U1 = (undefined);
     r0 = undefined;
     return leave(s, r0)
   default: oops()
@@ -3382,8 +3382,8 @@ function inline__P7417_mk(s) {
   tmp_6: undefined,
   tmp_7: undefined,
   slime___7419: undefined,
-  unnamed154___U1: undefined,
-  unnamed155___U2: undefined,
+  unnamed218___U1: undefined,
+  unnamed219___U2: undefined,
 } }
 
 
@@ -34853,8 +34853,8 @@ switch (step) {
     s.enemyList___16605 = undefined;
     s.i___16607 = undefined;
     s.enemySprite___16622 = undefined;
-    s.unnamed148___U4 = undefined;
-    s.unnamed149___U5 = undefined;
+    s.unnamed212___U4 = undefined;
+    s.unnamed213___U5 = undefined;
     s.enemyNo___16604 = (5);
     r0 = pxsim_Array__mk();
     s.enemyList___16605 = (r0);
@@ -34884,15 +34884,15 @@ switch (step) {
     s.callLocIdx = 147; s.pc = 6; return s.tmp_0;
   case 6:
     r0 = s.retval;
-    s.unnamed148___U4 = (r0);
-    s.unnamed149___U5 = (0);
+    s.unnamed212___U4 = (r0);
+    s.unnamed213___U5 = (0);
   case 3:
-    s.tmp_0 = r0 = s.unnamed149___U5;
-    r0 = pxsim_Array__length(s.unnamed148___U4);
+    s.tmp_0 = r0 = s.unnamed213___U5;
+    r0 = pxsim_Array__length(s.unnamed212___U4);
     s.tmp_1 = r0;
     r0 = (s.tmp_0 < s.tmp_1);
     if (!r0) { step = 4; continue; }
-    r0 = pxsim_Array__getAt(s.unnamed148___U4, s.unnamed149___U5);
+    r0 = pxsim_Array__getAt(s.unnamed212___U4, s.unnamed213___U5);
     s.enemySprite___16622 = (r0);
     s.tmp_2 = Sprite_setPosition__P2424_mk(s);
     s.tmp_2.arg0 = s.enemySprite___16622;
@@ -34903,11 +34903,11 @@ switch (step) {
     s.callLocIdx = 148; s.pc = 7; return s.tmp_2;
   case 7:
     r0 = s.retval;
-    r0 = (s.unnamed149___U5 + 1);
-    s.unnamed149___U5 = (r0);
+    r0 = (s.unnamed213___U5 + 1);
+    s.unnamed213___U5 = (r0);
     { step = 3; continue; }
   case 4:
-    s.unnamed148___U4 = (undefined);
+    s.unnamed212___U4 = (undefined);
     r0 = undefined;
     return leave(s, r0)
   default: oops()
@@ -34926,8 +34926,8 @@ function level_generateEnemies__P7332_mk(s) {
   enemyList___16605: undefined,
   i___16607: undefined,
   enemySprite___16622: undefined,
-  unnamed148___U4: undefined,
-  unnamed149___U5: undefined,
+  unnamed212___U4: undefined,
+  unnamed213___U5: undefined,
 } }
 
 
@@ -70577,5 +70577,5 @@ const sprites_BaseSpriteSayRenderer__C2273_VT = mkVTable({
 
 const breakpoints = setupDebugger(1, ["transparency16___4501","userName___4453","intro___4454","Boy___4467","Girl___4468","Treasure___4469","Goal___4470","Chest___4472","Wall___4473","Door___4474","Projectile___4475","Slime___4476","BoyImageRight1___4477","BoyImageRight2___4478","BoyImageRight3___4479","BoyImageLeft1___4480","BoyImageLeft2___4481","BoyImageLeft3___4482","BoyImageUp1___4483","BoyImageUp2___4484","BoyImageUp3___4485","BoyImageDown1___4486","BoyImageDown2___4487","BoyImageDown3___4488","BoyImageIdle___4489","playerSprite___4446","loadedLevel___4455","maxLevel___4456","doorSprite___4451","chestSprite___4452","projectileSprite___4448"])
 
-return _main___P26005
+return _main___P26205
 })
