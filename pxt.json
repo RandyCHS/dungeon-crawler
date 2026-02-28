@@ -1,6 +1,6 @@
 {
     "name": "Dungeon Crawler",
-    "description": "",
+    "description": "My modified version of this tutorial: https://learn.littlebirdelectronics.com.au/guides/advanced-dungeon-crawler-in-makecode-arcade",
     "dependencies": {
         "device": "*",
         "color-coded-tilemap": "*",
