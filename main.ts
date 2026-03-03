@@ -6,10 +6,10 @@ const TILE_SIZE = 16;
 /*
 *Globals
 */
-// let selectionBox: Sprite = null;
+let selectionBox: Sprite = null;
 let playerSprite: Sprite = null;
 let boySprite: Sprite = null;
-// let girlSprite: Sprite = null;
+let girlSprite: Sprite = null;
 let projectileSprite: Sprite = null;
 let enemySprite: Sprite = null;
 let enemyList: Sprite[] = [];
